@@ -33,7 +33,7 @@ for r in range(0,50):
 
 print(np.max(results))
 
-#finalresults = np.zeros((10,10))
+# finalresults = np.zeros((10,10))
 
 #bandgroups = results.array_split(10)
 
