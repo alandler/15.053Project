@@ -1,5 +1,5 @@
 import rasterio as rio
-# import pandas as pd
+import pandas as pd
 import numpy as np
 import math
 
@@ -33,11 +33,5 @@ for r in range(0,50):
 
 print(np.max(results))
 
-# finalresults = np.zeros((10,10))
-
-#bandgroups = results.array_split(10)
-
-# print(bandgroups)
-
-
-# print(row1split)
+df = pd.DataFrame(results)
+df.to_csv("Results.csv")
