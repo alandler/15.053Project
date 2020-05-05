@@ -1,0 +1,13 @@
+import pandas as pd
+df = pd.read_csv("data.csv")
+edf = pd.read_csv("electricity.csv")
+
+arr = []
+for i in range(len(df)):
+    if i%10 == 0:
+        print(i)
+    arr.append(min([((df["coord_x"][i]-edf["x"][j])**2+(df["coord_y"][i]-edf["y"][j])**2)**(1/2) for j in range(len(edf))]))
+
+df["Min_Dist"] = arr
+    
+df.to_csv("Data_With_Dist.csv")
