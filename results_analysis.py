@@ -13,7 +13,7 @@ freqs = [{},{},{},{}]
 nodes = set()
 
 for i, frame in enumerate(dfs):
-    for node_string in frame['Cluster_List']:
+    for node_string in frame['6']:
         node_list = node_string.strip('][').split(', ') 
         for node in node_list:
             nodes.add(node)

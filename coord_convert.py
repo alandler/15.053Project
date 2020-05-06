@@ -18,6 +18,6 @@ df["coord_y"] = [c[1] for c in df["Coord_val"]]
 df2 = pd.read_csv("Results.csv")
 
 
-df['value'] = [df2[str(int(row['pixel_y']))][int(row['pixel_x'])] for index, row in df.iterrows()]
+df['value'] = [df2[str(int(row['pixel_x']))][int(row['pixel_y'])] for index, row in df.iterrows()]
 
 df.to_csv("data.csv")
